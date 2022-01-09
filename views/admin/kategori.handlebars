@@ -1,0 +1,78 @@
+<section class="page-image page-image-about md-padding">
+		<h1 class="text-white text-center">ADMİN</h1>
+	</section>
+
+	<!--==========================
+    ABOUTUS Section
+============================-->
+	<section id="aboutus" class="md-padding">
+		<div class="container">
+
+			{{> admin-nav}}
+		
+        <p>&nbsp;</P>
+       <p>&nbsp;</P>
+	<div class="clearfix"></div>
+			<h3 style="text-transform:lowercase; color:darkgray" >HEY BİLİM MERAKLISI ! <br>  YAPAY ZEKA VE UZAY HAKKINDA DAHA DERİN BİR YOLCULUĞA ADIM ATMAK İSTİYORSAN İSTEDİĞİN DERSİ KATEGORİNE EKLEMEYİ UNUTMA :)</h3>
+	<div class="clearfix"></div>
+	<div class="mb-5"></div>
+         <div class="row">
+          <div class="col-md-4">
+	<form action="" method="POST" enctype="multipart/form-data">
+					<div class="row">
+						<div class="col-md-10">
+							<div class="form-group">
+								<input class="form-control" name="name" type="text" placeholder="Lesson Category Add*" required data-validation-required-message="Please enter your username.">
+								<p class="help-block text-danger"></p>
+							</div>
+				
+				
+						</div>
+						
+						</div>
+					<div class="clearfix"></div>
+						<div class="col-lg-12">
+							<div id="success"></div>
+							<button  class="main-btn" style="margin-left: 0;" type="submit">Lesson Add</button>
+						</div>
+					</div>
+				</form>
+		  </div>
+		  <div class="col-md-12">
+			  <table class="table">
+				  <thead>
+					  <tr>
+						  <th>LESSON ID</th>
+						  <th>LESSON NAME</th>
+						  <th>LESSON DELETE</th>
+						    
+					  </tr>
+				  </thead>
+
+				  <tbody>
+					  {{#each kategori}}
+					  <tr>
+					<td>{{_id}}</td>
+					<td>{{name}}</td>
+					
+					<td>
+                    <form action="/admin/kategori/{{_id}}?_method=DELETE" method="POST">
+						<input type="hidden" name="_method" value="DELETE">
+						<button type="submit" class="btn btn-danger">DELETE</button>
+					</form>
+ 
+					</td>
+
+					</tr>
+					{{/each}}
+				  </tbody>
+			  </table>
+
+		  </div>
+		 </div>
+			</div>
+	</section>
+
+	
+
+	
